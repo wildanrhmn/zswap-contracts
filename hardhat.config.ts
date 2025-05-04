@@ -4,7 +4,6 @@ import "hardhat-contract-sizer";
 
 const PRIVATE_KEY = vars.get("PRIVATE_KEY");
 const SCROLLSCAN_API_KEY = vars.get("SCROLLSCAN_API_KEY");
-const SCROLL_SEPOLIA_URL = vars.get("SCROLL_SEPOLIA_URL");
 
 const config: HardhatUserConfig = {
   solidity: {
@@ -22,7 +21,7 @@ const config: HardhatUserConfig = {
   },
   networks: {
     scrollSepolia: {
-      url: SCROLL_SEPOLIA_URL,
+      url: "https://sepolia-rpc.scroll.io",
       accounts: PRIVATE_KEY ? [PRIVATE_KEY] : [],
     },
   },
